@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(233, 43, 97);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    background-color: rgb(181, 33, 85);
+    border: 4px white solid;
+    border-top: 0;
+    border-bottom: 0;
+    width: 80vw;
+    padding-top: 0.05%;
+    padding-bottom: 0.05%;
+}
+
+.tituloprincipal{
+    color: white;
+    font-size: 3em;
+}
+
+.titulosecundario{
+    margin: 3%;
+    font-size: 1.5em;
+}
+
+section{
+    background-color: rgb(181, 33, 85);
+    color: white;
+    padding-top: 1%;
+    width: 80vw;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 0.8%;
+}
+
+article{
+    background-color: white;
+    color: black;
+    border-radius: 1.5%;
+    margin: 3%;
+    padding-bottom: 2%;
+}
+
+.titulojuego{
+    color: rgb(181, 33, 85);
+    text-align: right;
+    border-bottom: 2px dotted;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 0;
+    padding-top: 3%;
+}
+
+img{
+    width: 75vw;
+    padding: 2%;
+}
+
+p{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    color: white;
+    background-color: green;
+    font-size: 1.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(181, 33, 85);
+}
+
+footer{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    background-color: rgb(195, 104, 134);
+    width: 80vw;
+    height: 3em;
+    border-radius: 1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    color: white;
+}
+
+/* Pagina Secundaria */
+.vendidos{
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    font-size: 1.em;
+    border: 2px solid black;
+}
+
+.vendidos:hover{
+    background-color: rgb(181, 33, 85);
+}
+
+.divcompra{
+    height: 70vh;
+    width: 65vw;
+    margin: 2%;
+    display: inline-block;
+    align-items: normal;
+    justify-content:  left;
+    overflow: hidden;
+
+}
+
+.divimgcompra{
+    height: 30%;
+    width: 45%;
+    padding-bottom: 2%;
+}
+
+.imgcompra{
+    height: 80%;
+    width: auto;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.divpcomra{
+    font-size: medium;
+    margin-top: 0;
+    padding-top: 0%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pago */
+
+.divpago{
+    height: 75vh;
+    width: 40vw;
+    display: block;
+    margin-top: 2%;
+    overflow: hidden;
+}
+
+.medios-pago{
+    width: 40%;
+    height: auto;
+    margin-top: 0;
+}
+
+.p-pago{
+    color: rgb(181, 33, 85);
+    border: 2px rgb(181, 33, 85) solid;
+}
+
+.precio-pago{
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.botoncompra{
+    margin-top: 2%;
+}

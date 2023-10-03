@@ -1,0 +1,37 @@
+img{
+   width: 100%;
+}
+
+a, small{
+    color: #e27937;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #6e413b;
+    font-size: 1.25em;
+}
+
+h1{
+    color: #6e413b;
+}
+
+h2{
+    color: white;
+    background-color: #6e413b;
+}
+
+h3{
+    font-size: 3em;
+}
+
+div img{
+    width: auto;
+    height: 150px;
+    border-radius: 5%;
+    margin: 15px;
+}
+
+ol li ul li{
+    list-style-type:circle;
+}
