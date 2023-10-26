@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/apollo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.separator-top {
+    margin-top: 3vh;
+}
+
+.separator-bottom {
+    margin-bottom: 3vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 3vw;
+    align-items: center;
+}
+
+fieldset {
+    width: max(50vw, 480px);
+    /* width: 50vw; */
+    /* min-width: 480px; */
+    font-size: 1.4em;
+    padding: 2vh 2vw;
+    border: 2px solid black;
+    transition: all 2s;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.datosPersonales,
+.datosDeContacto,
+.actividades {
+    color: white;
+}
+
+fieldset:hover {
+    background-color: rgba(128, 128, 128, 1);
+    box-shadow: 10px 10px 10px blue;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+select,
+textarea {
+    width: 95%;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divDatosPersonales label,
+.datosDeContacto label {
+    display: block;
+    margin: 1vw;
+}
+
+fieldset:focus-within {
+    background-color: rgba(128, 128, 128, 1);
+}
+
+
+input:focus {
+    background-color: #202c29;
+}
+
+legend {
+    color: white;
+    width: fit-content;
+    padding: 0.5vw;
+    background-color: darkgrey;
+    border-radius: 0.5vw;
+    font-weight: 900;
+}
+
+.botones {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+}
+
+.terminosCondiciones,
+.novedades,
+.divTerminos>p {
+    font-size: 1.2em;
+    color:azure;
+    margin: 1vw;
+}
+
+.terminosCondiciones>label,
+.novedades>label,
+.divTerminos>p
+ {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 0.3vw;
+    width: fit-content;
+}
+
+.divTerminos>p {
+    margin:0.5vw;
+    margin-bottom: 4vh;
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+
+}
+
+input[type="submit"],
+input[type="reset"] {
+        font-size: 1.3em;
+        padding: 0.2vw
+}

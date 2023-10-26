@@ -1,0 +1,439 @@
+* {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+Colores utilizados
+Azul claro: #A4BDB7;
+Azul medio: #344966;
+Azul oscuro: #0d1821;
+Rojo: #c41a1a;
+ */
+
+body {
+    background-image: url(../images/fondo-abstracto-de-la-tecnología-futurista-concepto-del-ciberespacio-126558022.webp);
+    background-size: 100%;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    position: relative;
+}
+
+
+h1 {
+    font-weight: 900;
+    font-size: 4.5em;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #B4CDED;
+    margin-top: 0;
+}
+
+h1 button {
+    width: 10vw;
+    height: 4vh;
+    border-radius: 2vw;
+    box-shadow: 1vh 1vh rgba(196, 26, 26, 0.6);
+    font-size:large;
+}
+
+h1 button:active {
+    position: relative;
+    top: 6px;
+    right: -6px;
+    box-shadow: none;
+}
+
+
+form {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.datosPersonales,
+.datosDeContacto,
+.actividades {
+    width: 26vw;
+    background-color: rgba(52, 73, 102, 0.5);
+    color: #B4CDED;
+    box-shadow: 15px 15px rgba(196, 26, 26, 0.6);
+    border-radius: 5vh 5vh 5vh 5vh;
+}
+
+.datosPersonales {
+    position: absolute;
+    left: 10vw;
+    top: 18vh;
+    padding-bottom: 20px;
+}
+
+.datosDeContacto {
+    position: absolute;
+    top: 18vh;
+    right: 10vw;
+    padding-bottom: 20px;
+
+}
+
+.actividades {
+    position: absolute;
+    top: 57vh;
+    right: 10vw;
+    padding-bottom: 20px;
+
+}
+
+section:nth-of-type(1) {
+    position: absolute;
+    top: 25vh;
+    right: 49vw;
+    border-radius: 10%/15%;
+    width: 5vw;
+    box-sizing: border-box;
+}
+
+.circulo1,
+.circulo3,
+.circulo5,
+.circulo7,
+.circulo9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(52, 73, 102, 0.7);
+    height: 4vw;
+    width: fit-content;
+    margin: 5px;
+    margin-top: 20px;
+    padding: 1vw;
+    box-shadow: 3px 3px 3px 3px rgba(196, 26, 26, 0.6);
+}
+
+.circulo1::before,
+.circulo3::before,
+.circulo5::before,
+.circulo7::before,
+.circulo9::before {
+    content: "CLICK";
+    color: #A4BDB7;
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+section:nth-of-type(2) {
+    visibility: hidden;
+}
+
+.circulo1:active:before {
+    content: " ";
+    width: 4vw;
+}
+
+.circulo1:active {
+    background-image: url(../images/estilo-vida-wellness-health-lifestyle-palabra-entrenamiento.jpg);
+    background-position: 10px;
+    transform: scale(4.5);
+    transition: opacity flex-grow;
+    transition-duration: 1s;
+    background-size: 5vw;
+    box-shadow: none;
+    border-radius: 35%;
+}
+
+.circulo3:active:before {
+    content: " ";
+    width: 4vw;
+}
+
+.circulo3:active {
+    background-image: url(../images/hombre-haciendo-ciclismo-indoor-gafas-vr.jpg);
+    background-size: contain;
+    transform: scale(4.5) rotate(359.9deg);
+    transition-duration: 1s;
+    background-size: 5vw;
+    box-shadow: none;
+    border-radius: 35%;
+}
+
+.circulo5:active:before {
+    content: " ";
+    width: 4vw;
+}
+
+.circulo5:active {
+    background-image: url(../images/hombre-tiro-completo-entrenando-estadisticas.jpg);
+    background-position: 20%;
+    transform: scale(4.5) rotateY(359.9deg);
+    transition-duration: 1s;
+    background-size: 5vw;
+    box-shadow: none;
+    border-radius: 35%;
+}
+
+.circulo7:active:before {
+    content: " ";
+    width: 4vw;
+}
+
+.circulo7:active {
+    background-image: url(../images/persona-que-trabaja-pantallas-flotantes.jpg);
+    background-size: 25px;
+    background-position: 20%;
+    transform: scale(4.5) rotatex(359.9deg);
+    transition-duration: 1s;
+    background-size: 5vw;
+    box-shadow: none;
+    border-radius: 35%;
+}
+
+.circulo9:active:before {
+    content: " ";
+    width: 4vw;
+}
+
+.circulo9:active {
+    background-image: url(../images/personas-que-trabajan-interior-junto-pesas.jpg);
+    background-position: 20%;
+    transform: scale(4.5) rotatex(-359.9deg);
+    transition-duration: 1s;
+    background-size: 5vw;
+    box-shadow: none;
+    border-radius: 50%;
+}
+
+
+legend {
+    color: white;
+    font-size: 1.5em;
+    width: 27vw;
+    padding: 1vw;
+    font-weight: 700;
+    background-color: rgba(13, 24, 33, 0.7);
+    border-radius: 5vh 5vh 0 0;
+}
+
+
+.divDatosPersonales label,
+.datosDeContacto label,
+.actividades p,
+.datosPersonales div p {
+    display: block;
+    margin: 0.8vh;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.actividades div p,
+.actividades div label,
+.actividades div input {
+    text-align: center;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+select {
+    width: 60%;
+    padding: 0.1vh;
+    height: 2em;
+}
+
+
+textarea {
+    width: 60%;
+    padding: 0.1vh;
+}
+
+.actividades div label {
+    font-size: 1.1em;
+}
+
+.datosPersonales div p {
+    text-align: left;
+}
+
+
+.divTerminos {
+    width: fit-content;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: 30vh;
+}
+
+
+.divTerminos [type=submit],
+.divTerminos [type=reset] {
+    font-size: 1.5em;
+    height: fit-content;
+    padding: 1vh;
+    color: rgba(164, 189, 183);
+    background-color: rgb(52, 73, 102);
+    border-radius: 5px;
+    box-shadow: 8px 8px rgba(196, 26, 26, 0.6);
+    margin: 2vw;
+}
+
+
+fieldset:focus-within {
+    background-color: rgb(52, 73, 102);
+    box-shadow: none;
+}
+
+fieldset:focus-within>legend {
+    background-color: rgb(13, 24, 33);
+}
+
+input:focus {
+    background-color: #A4BDB7;
+}
+
+.divTerminos [type=submit]:active,
+.divTerminos [type=reset]:active {
+    position: relative;
+    top: 6px;
+    right: -6px;
+    box-shadow: none;
+}
+
+
+@media ((max-width: 1150px)) {
+    .divTerminos {
+        top: 40vh;
+    }
+
+    .actividades {
+        top: 60vh;
+        right: 10vw;
+    }
+
+    .datosPersonales,
+    .datosDeContacto,
+    .actividades,
+    legend {
+        width: 30vw;
+    }
+
+}
+
+@media ((max-width: 1020px)) {
+    .divTerminos {
+        top: 48vh;
+    }
+
+    .actividades {
+        top: 65vh;
+        right: 10vw;
+    }
+
+    .datosPersonales,
+    .datosDeContacto,
+    .actividades,
+    legend {
+        width: 35vw;
+    }
+
+}
+
+.datosPersonales {
+    left: 5vw;
+}
+
+.datosDeContacto,
+.actividades {
+    right: 5vw;
+}
+
+@media ((max-width: 858px)) {
+    .divTerminos {
+        top: 55vh;
+    }
+
+    .datosPersonales {
+        left: 4vw;
+    }
+
+    .datosDeContacto,
+    .actividades {
+        right: 3vw;
+    }
+
+    .datosPersonales,
+    .datosDeContacto,
+    .actividades,
+    legend {
+        width: 38vw;
+    }
+}
+
+@media ((max-width: 795px)) {
+
+    form {
+        margin-top: 2vh;
+    }
+
+    .datosPersonales,
+    .datosDeContacto,
+    .actividades,
+    section:nth-of-type(1),
+    .divTerminos,
+    legend {
+        width: 80vw;
+        position: static;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    section:nth-of-type(1) {
+        display: flex;
+        width: 80vw;
+    }
+
+    .circulo1,
+    .circulo3,
+    .circulo5,
+    .circulo7,
+    .circulo9 {
+        display: inline-block;
+        justify-content: center;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+        height: auto;
+        width: fit-content;
+        padding: 1vw;
+    }
+
+    .actividades {
+        position: relative;
+        top: -65vh;
+        left: 1.5vw;
+    }
+
+    .divTerminos {
+        position: relative;
+        top: -50vh;
+
+    }
+
+    .circulo1:active,
+    .circulo3:active,
+    .circulo5:active,
+    .circulo7:active,
+    .circulo9:active {
+        background-position: 20%;
+        transform: scale(5.5);
+        transition-duration: 1s;
+        width: 5vw;
+
+    }
+}
