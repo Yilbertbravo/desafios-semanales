@@ -1,0 +1,132 @@
+@use "./variables" as var;
+
+html {
+    height: 100%;
+    background-color: #000;
+}
+
+body {
+    padding-top: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    background: #0a0a0a;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(15, 15, 15, 1) 100%);
+    height: 100%;
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 7px hsla(0, 50%, 50%, 1);
+    }
+
+    h1>strong {
+        font-style: italic;
+    }
+
+    .button {
+        box-shadow: inset 3px 3px 3px rgba(255, 255, 255, .7), inset -2px -2px 3px rgba(0, 0, 0, .1), 8px 8px rgba(201, 151, 151, 0.5);;
+        width: 95px;
+        border: 3px solid #da2f2f;
+        background: #fff;
+        text-align: center;
+        text-shadow: 2px 2px rgba(0, 0, 0, .4);
+        border-radius: 15px;
+        color: #da2f2f;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: fit-content;
+        transform: rotateY(35deg) ;
+    }
+
+    .button:active {
+        text-shadow: 1px 1px rgba(0, 0, 0, .3);
+        background: #dc1010;
+        color: #000;
+        box-shadow: inset 4px 4px 4px rgba(0, 0, 0, .3), inset -3px -3px 3px rgba(255, 255, 255, .2);
+        position: relative;
+        left: 5px;
+        top: 5px
+    }
+
+    .button:hover {
+        cursor: pointer;
+    }
+
+    #cajas {
+        width: 80%;
+        margin: 20px auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    #cajas>div {
+        width: 200px;
+        height: 200px;
+        border: 10px solid #000;
+        transition: background-position .9s linear 2s, border-bottom-color 1.2s, background-color .5s;
+        transition-delay: .4s;
+        background-color: #000;
+        background-position: -180px -40px;
+        background-repeat: no-repeat;
+    }
+
+    #cajas>div[title="Presentado"] {
+        background-position: 20px 20px;
+        background-color: #fff;
+        border-bottom-color: #fff;
+    }
+
+    #cajas>div:after {
+        transition: background-position .8s cubic-bezier(0.18, 0.89, 0.32, 1.28) .7s, box-shadow .2s linear .7s;
+        content: "";
+        width: 200px;
+        height: 200px;
+        background: url('../img/cortina.png') -100px -2px no-repeat;
+        position: absolute;
+    }
+
+    #cajas>div[title="Presentado"]:after {
+        background-position: 100px -2px;
+        box-shadow: -19px 20px 36px 5px hsla(0, 100%, 100%, .5);
+    }
+
+    #cajas>div:not([title="Presentado"]):hover:after {
+        transition: background-position 1s;
+        transition-delay: 0s;
+        background-position: -80px -2px;
+    }
+
+    #mario {
+        background: url('../img/mario.png');
+    }
+
+    #luigi {
+        background: url('../img/luigi.png');
+    }
+
+    #bowser {
+        background: url('../img/bowser.png');
+    }
+
+    #peach {
+        background: url('../img/peach.png');
+    }
+
+    #yoshi {
+        background: url('../img/yoshi.png');
+    }
+
+    #toadette {
+        background: url('../img/toadette.png');
+    }
+
+    #daisy {
+        background: url('../img/daisy.png');
+    }
+
+    #toad {
+        background: url('../img/toad.png');
+    }
+}
