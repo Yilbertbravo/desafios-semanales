@@ -1,0 +1,165 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nova Square', sans-serif;
+    background-color: rgb(223, 191, 152);
+}
+
+header {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10%;
+    background-color: lightslategray;
+    border-radius: 1em;
+    box-shadow: 10px 10px 7px 3px rgba(0, 0, 0, 0.7),
+    -2px -2px 3px 3px rgba(0, 0, 0, 0.2);
+    width: clamp(200px, 50%, 300px);
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3fr repeat(5, 1fr);
+    gap: 0.25em;
+    padding: 0.6em;
+
+    grid-template-areas:
+        "pantalla pantalla pantalla pantalla"
+        "clear clear-all percentage multipli"
+        "seven eight nine division"
+        "four five six subtraction"
+        "one two three addition"
+        "cero cero punto equal"
+    ;
+
+    font-size: 1.5em;
+}
+
+button {
+    font-size: 1.1em;
+    box-shadow: inset 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.7);
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: pantalla;
+    background-color: lightgray;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    text-align: right;
+    box-shadow: inset 0px 0px 3px 3.5px rgba(0, 0, 0, 0.7);
+    word-break: break-all;
+}
+
+#operadores{
+    text-align: left;
+    height: 1em;
+    width: 15%;
+    font-size: 1em;
+}
+
+.previous__value {
+    font-size: 0.8em;
+}
+
+.current__value {
+    font-size: 1.2em;
+}
+
+.operator {
+    background-color: rgb(34, 49, 107);
+    color: white;
+}
+
+.operator-push {
+    background-color: rgb(78, 84, 108);
+    color: white;
+}
+
+#clear {
+    grid-area: clear;
+    background-color: rgb(231, 141, 44);
+}
+
+#clear-all {
+    grid-area: clear-all;
+    background-color: rgb(231, 141, 44);
+}
+
+#cero {
+    grid-area: cero;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#one {
+    grid-area: one;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#multipli {
+    grid-area: multipli;
+}
+
+#punto {
+    grid-area: punto;
+}
+
+#percentage {
+    grid-area: percentage;
+}
+
+#subtraction {
+    grid-area: subtraction;
+}
+
+#equal {
+    grid-area: equal;
+}
+
+#division {
+    grid-area: division;
+}
