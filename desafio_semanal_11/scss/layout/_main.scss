@@ -1,0 +1,103 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+
+    &__products {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column: span 2;
+        gap: 1em;
+
+        .products__arepa,
+        .products__burguer,
+        .products__pepito,
+        .products__perros {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+        }
+    }
+
+    &__purchase__order {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        border: 1px solid black;
+        padding: 0.5em;
+        background-color: rgb(208, 206, 206);
+        border-radius: 4% / 2%;
+        box-shadow: 1px -1px 10px red;
+
+        .purchase__order__title {
+            height: 4em;
+            border-bottom: 2px dotted black;
+        }
+
+        .purchase__order__title h2 {
+            text-align: center;
+            font-family: 'Kalnia', serif;
+        }
+
+        .purchase__order__products {
+            height: 80%;
+            border-bottom: 2px dotted black;
+        }
+
+        .total__price {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 2em;
+            padding-right: 2em;
+            height: 3.5em;
+            border-bottom: 2px dotted black;
+
+            .total__price__number {
+                font-size: 1.5em;
+            }
+
+            .total__price__number::before {
+                content: "$  ";
+                font-weight: bold;
+            }
+        }
+
+    }
+
+
+    &__buyer__data {
+        display: flex;
+
+        grid-column: span 3;
+        border: 1px solid black;
+        padding: 0.5em;
+        background-color: rgb(208, 206, 206);
+        border-radius: 5% / 12%;
+        box-shadow: 1px -1px 10px red;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .main {
+
+        &__products {
+            grid-template-rows: repeat(3, 1fr);
+            height: 70%;
+
+            .products__arepa,
+            .products__burguer,
+            .products__pepito,
+            .products__perros {
+                grid-template-columns: repeat(2, 1fr);
+                height: 70%;
+            }
+        }
+
+        &__purchase__order {
+            height: 85%;
+            border-radius: 10% / 1%;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+ .buy__products:hover {
+
+     .buy__products__btn__add,
+     .buy__products__btn__remove,
+     #btn__comprar,
+     #btn__reset {
+         display: block;
+         width: 40%;
+         align-self: center;
+         margin: 0.25em;
+         border-radius: 0.5em;
+         border: none;
+         box-shadow: 2.5px 2.5px 0.5px rgba(0, 0, 0, 0.5);
+     }
+
+     .buy__products__btn__add {
+         background-color: rgb(151, 182, 238);
+     }
+
+     .buy__products__btn__remove {
+         background-color: rgb(243, 137, 137);
+     }
+
+     .buy__products__btn__add:active,
+     .buy__products__btn__remove:active {
+         transform: translate(2.5px, 2.5px);
+         box-shadow: none;
+     }
+
+ }
+
+ .div__btn__buy {
+
+     display: flex;
+     justify-content: center;
+     margin-top: 2em;
+
+     #btn__comprar,
+     #btn__reset {
+         height: 2.5em;
+         width: 40%;
+         align-self: center;
+         margin: 0.25em;
+         border-radius: 0.5em;
+         border: none;
+         box-shadow: 2.5px 2.5px 0.5px rgba(0, 0, 0, 0.5);
+
+     }
+
+     #btn__comprar {
+         background-color: rgb(151, 182, 238);
+     }
+
+     #btn__reset {
+         background-color: gray;
+         color: white;
+     }
+
+     #btn__comprar:active,
+     #btn__reset:active {
+         transform: translate(2.5px, 2.5px);
+         box-shadow: none;
+     }
+ }
+
+
+ .total__price__btn {
+     display: flex;
+     justify-content: center;
+
+     .total__price__add {
+         height: 2.5em;
+         width: 40%;
+         align-self: center;
+         margin: 0.25em;
+         border-radius: 0.5em;
+         border: none;
+         box-shadow: 2.5px 2.5px 0.5px rgba(0, 0, 0, 0.5);
+         background-color: rgb(151, 182, 238);
+     }
+
+     .total__price__add:active {
+         transform: translate(2.5px, 2.5px);
+         box-shadow: none;
+     }
+ }
+
+
+ @media (max-width: 1200px) {
+.buy__products:hover {
+
+        .buy__products__btn__add,
+        .buy__products__btn__remove,
+        #btn__comprar,
+        #btn__reset {
+            width: 60%;
+            height: 2em;
+        }
+
+    }
+
+ }

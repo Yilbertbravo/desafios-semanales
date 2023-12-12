@@ -1,0 +1,44 @@
+.main__buyer__data {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5em;
+    padding: 1.5em;
+
+
+    #formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+
+        font-family: 'Kalnia', serif;
+        font-weight: bold;
+
+        label {
+            font-size: 1.3em;
+        }
+
+        input,
+        textarea {
+            margin: 0.25em;
+            width: 100%;
+            resize: none;
+            font-size: 1.2em;
+        }
+
+        button {
+            font-size: 1.3em;
+        }
+
+        .error__date {
+            color: red;
+            background-color: rgb(255, 0, 0, 0.3);
+            width: 60%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+    }
+}

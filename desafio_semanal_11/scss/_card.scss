@@ -1,0 +1,98 @@
+.buy__products {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+
+    border-radius: 8% / 5%;
+    padding: 1em;
+
+
+
+    .buy__products__title {
+        font-family: 'Kalnia', serif;
+        margin: 0.15em;
+    }
+
+    .buy__products__img {
+        width: 60%;
+        border-radius: 8% / 5%;
+        align-self: center;
+    }
+
+    .buy__products__desc {
+        font-family: 'Caveat', cursive;
+        font-size: 1.3em;
+    }
+
+    .buy__products__price {
+        content: "$";
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .buy__products__price::before {
+        content: "Precio: $ ";
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buy__products__btn__add,
+    .buy__products__btn__remove {
+        display: none;
+    }
+
+}
+
+.buy__products:hover {
+    border: 1px solid black;
+    background-color: rgb(243, 204, 204);
+    transform: scale(1.05);
+}
+
+ @media (max-width: 1200px) {
+    .buy__products {
+
+    
+            .buy__products__img {
+                width: 50%;
+
+            }
+    
+            .buy__products__desc {
+                font-size: 1.2em;
+            }
+    
+            .buy__products__price {
+  
+                font-size: 1.3em;
+            }
+    
+            .buy__products__price::before {
+                content: "Precio: $ ";
+            }
+    
+            .btns {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .buy__products__btn__add,
+            .buy__products__btn__remove {
+                display: none;
+            }
+    
+        }
+    
+        .buy__products:hover {
+            border: 1px solid black;
+            background-color: rgb(243, 204, 204);
+            transform: scale(1.05);
+        }
+
+ }
+

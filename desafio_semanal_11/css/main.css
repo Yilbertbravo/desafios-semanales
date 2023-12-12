@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Kalnia:wght@400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 0.5fr 5fr 0.5fr;
+  padding: 1em;
+  background-color: rgb(187, 185, 185);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+.header__title {
+  grid-template-areas: 4fr;
+  text-align: center;
+  align-self: center;
+  font-size: 2em;
+  font-family: "Kalnia", serif;
+  font-weight: 400;
+}
+.header__title--span {
+  font-size: 1.5em;
+  color: red;
+}
+.header__title--p {
+  font-size: 0.8em;
+  text-align: right;
+  font-style: italic;
+  margin-right: 25%;
+  font-family: "Caveat", cursive;
+  color: red;
+}
+.header__img {
+  height: 90%;
+  justify-self: center;
+  border-radius: 45%;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.main__products {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column: span 2;
+  gap: 1em;
+}
+.main__products .products__arepa,
+.main__products .products__burguer,
+.main__products .products__pepito,
+.main__products .products__perros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.main__purchase__order {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  border: 1px solid black;
+  padding: 0.5em;
+  background-color: rgb(208, 206, 206);
+  border-radius: 4%/2%;
+  box-shadow: 1px -1px 10px red;
+}
+.main__purchase__order .purchase__order__title {
+  height: 4em;
+  border-bottom: 2px dotted black;
+}
+.main__purchase__order .purchase__order__title h2 {
+  text-align: center;
+  font-family: "Kalnia", serif;
+}
+.main__purchase__order .purchase__order__products {
+  height: 80%;
+  border-bottom: 2px dotted black;
+}
+.main__purchase__order .total__price {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2em;
+  padding-right: 2em;
+  height: 3.5em;
+  border-bottom: 2px dotted black;
+}
+.main__purchase__order .total__price .total__price__number {
+  font-size: 1.5em;
+}
+.main__purchase__order .total__price .total__price__number::before {
+  content: "$  ";
+  font-weight: bold;
+}
+.main__buyer__data {
+  display: flex;
+  grid-column: span 3;
+  border: 1px solid black;
+  padding: 0.5em;
+  background-color: rgb(208, 206, 206);
+  border-radius: 5%/12%;
+  box-shadow: 1px -1px 10px red;
+}
+
+@media (max-width: 1200px) {
+  .main__products {
+    grid-template-rows: repeat(3, 1fr);
+    height: 70%;
+  }
+  .main__products .products__arepa,
+  .main__products .products__burguer,
+  .main__products .products__pepito,
+  .main__products .products__perros {
+    grid-template-columns: repeat(2, 1fr);
+    height: 70%;
+  }
+  .main__purchase__order {
+    height: 85%;
+    border-radius: 10%/1%;
+  }
+}
+.buy__products {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  border-radius: 8%/5%;
+  padding: 1em;
+}
+.buy__products .buy__products__title {
+  font-family: "Kalnia", serif;
+  margin: 0.15em;
+}
+.buy__products .buy__products__img {
+  width: 60%;
+  border-radius: 8%/5%;
+  align-self: center;
+}
+.buy__products .buy__products__desc {
+  font-family: "Caveat", cursive;
+  font-size: 1.3em;
+}
+.buy__products .buy__products__price {
+  content: "$";
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.buy__products .buy__products__price::before {
+  content: "Precio: $ ";
+}
+.buy__products .btns {
+  display: flex;
+  flex-direction: column;
+}
+.buy__products .buy__products__btn__add,
+.buy__products .buy__products__btn__remove {
+  display: none;
+}
+
+.buy__products:hover {
+  border: 1px solid black;
+  background-color: rgb(243, 204, 204);
+  transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+  .buy__products .buy__products__img {
+    width: 50%;
+  }
+  .buy__products .buy__products__desc {
+    font-size: 1.2em;
+  }
+  .buy__products .buy__products__price {
+    font-size: 1.3em;
+  }
+  .buy__products .buy__products__price::before {
+    content: "Precio: $ ";
+  }
+  .buy__products .btns {
+    display: flex;
+    flex-direction: column;
+  }
+  .buy__products .buy__products__btn__add,
+  .buy__products .buy__products__btn__remove {
+    display: none;
+  }
+  .buy__products:hover {
+    border: 1px solid black;
+    background-color: rgb(243, 204, 204);
+    transform: scale(1.05);
+  }
+}
+.buy__products:hover .buy__products__btn__add,
+.buy__products:hover .buy__products__btn__remove,
+.buy__products:hover #btn__comprar,
+.buy__products:hover #btn__reset {
+  display: block;
+  width: 40%;
+  align-self: center;
+  margin: 0.25em;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 2.5px 2.5px 0.5px rgba(0, 0, 0, 0.5);
+}
+.buy__products:hover .buy__products__btn__add {
+  background-color: rgb(151, 182, 238);
+}
+.buy__products:hover .buy__products__btn__remove {
+  background-color: rgb(243, 137, 137);
+}
+.buy__products:hover .buy__products__btn__add:active,
+.buy__products:hover .buy__products__btn__remove:active {
+  transform: translate(2.5px, 2.5px);
+  box-shadow: none;
+}
+
+.div__btn__buy {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+.div__btn__buy #btn__comprar,
+.div__btn__buy #btn__reset {
+  height: 2.5em;
+  width: 40%;
+  align-self: center;
+  margin: 0.25em;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 2.5px 2.5px 0.5px rgba(0, 0, 0, 0.5);
+}
+.div__btn__buy #btn__comprar {
+  background-color: rgb(151, 182, 238);
+}
+.div__btn__buy #btn__reset {
+  background-color: gray;
+  color: white;
+}
+.div__btn__buy #btn__comprar:active,
+.div__btn__buy #btn__reset:active {
+  transform: translate(2.5px, 2.5px);
+  box-shadow: none;
+}
+
+.total__price__btn {
+  display: flex;
+  justify-content: center;
+}
+.total__price__btn .total__price__add {
+  height: 2.5em;
+  width: 40%;
+  align-self: center;
+  margin: 0.25em;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 2.5px 2.5px 0.5px rgba(0, 0, 0, 0.5);
+  background-color: rgb(151, 182, 238);
+}
+.total__price__btn .total__price__add:active {
+  transform: translate(2.5px, 2.5px);
+  box-shadow: none;
+}
+
+@media (max-width: 1200px) {
+  .buy__products:hover .buy__products__btn__add,
+  .buy__products:hover .buy__products__btn__remove,
+  .buy__products:hover #btn__comprar,
+  .buy__products:hover #btn__reset {
+    width: 60%;
+    height: 2em;
+  }
+}
+.main__buyer__data {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5em;
+  padding: 1.5em;
+}
+.main__buyer__data #formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  font-family: "Kalnia", serif;
+  font-weight: bold;
+}
+.main__buyer__data #formulario label {
+  font-size: 1.3em;
+}
+.main__buyer__data #formulario input,
+.main__buyer__data #formulario textarea {
+  margin: 0.25em;
+  width: 100%;
+  resize: none;
+  font-size: 1.2em;
+}
+.main__buyer__data #formulario button {
+  font-size: 1.3em;
+}
+.main__buyer__data #formulario .error__date {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.3);
+  width: 60%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.footer {
+  align-self: flex-end;
+  justify-self: center;
+}/*# sourceMappingURL=main.css.map */
